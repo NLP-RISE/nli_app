@@ -11,9 +11,10 @@ requires-python = ">=3.10,<3.14"
 dependencies = [
     "pandas>=2.2,<3",
     "streamlit>=1.40,<2",
-    "torch>=2.4",
     "transformers>=5,<6",
     "pytest (>=9.2.0,<10.0.0)",
+    "torch (>=2,<3)",
+    "torchvision (>=0.29.2,<0.30.0)",
 ]
 
 [project.optional-dependencies]
@@ -30,3 +31,6 @@ pythonpath = ["."]
 markers = [
     "integration: tests that load and run a real Hugging Face model",
 ]
+
+[tool.poetry]
+package-mode = false
